@@ -9,6 +9,10 @@ import com.lzx2005.Data;
  */
 public class InsertionSort extends BasicClass{
 
+    /**
+     * 插入排序
+     * @param a 数组
+     */
     public static void sort(int[] a){
         int length = a.length;
         for(int i=1;i<length;i++){
