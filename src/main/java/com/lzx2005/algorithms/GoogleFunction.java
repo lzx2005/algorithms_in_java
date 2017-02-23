@@ -8,8 +8,12 @@ package com.lzx2005.algorithms;
  */
 public class GoogleFunction {
     //递归方法
+    public int count = 0;
+
     public void searchResult(CharItem[] charItems,boolean[] valueUses,int index){
         if(index == charItems.length){
+            //组合完毕
+            count++;
             validFunction(charItems);
             return;
         }
@@ -77,8 +81,9 @@ public class GoogleFunction {
         //valueUses[0] = false 表示0这个数字没有被占用
         //valueUses[1] = false 表示1这个数字被占用
         boolean[] valueUses = {false,false,false,false,false,false,false,false,false};
-        new GoogleFunction().searchResult(charItems, valueUses,0);
-
+        GoogleFunction googleFunction = new GoogleFunction();
+        googleFunction.searchResult(charItems, valueUses,0);
+        System.out.println("共找到了"+googleFunction.count+"种组合");
     }
 }
 
