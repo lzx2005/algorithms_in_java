@@ -10,7 +10,6 @@ public class ReplaceSpaceToUrlEncoding {
         for(int i=0;i<str.length();i++){
             char c = str.charAt(i);
             if(Character.isSpaceChar(c)){
-                System.out.println(1);
                 str.replace(i,i+1,"%20");
             }
         }
@@ -18,7 +17,7 @@ public class ReplaceSpaceToUrlEncoding {
     }
 
     public static void main(String[] args) {
-        StringBuffer stringBuffer = new StringBuffer("We Are Happy");
+        StringBuffer stringBuffer = new StringBuffer("W e Are Happy");
         String s = new ReplaceSpaceToUrlEncoding().replaceSpace(stringBuffer);
         System.out.println(s);
     }
